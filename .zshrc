@@ -69,11 +69,5 @@ fi
 zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
 echo-sd "zshrc_finished."
 
-# byobu起動
-#[[ "$(ps -aux|grep byobu|wc -l)" = 1 ]] && byobu
-
 # 天気表示
 . ~/.weatherCast.sh
-
-# keybase
-export GPG_TTY=$(tty)
