@@ -23,6 +23,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacag
 export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;46'
 # export PS1="[[[\[\e[37;42m\]\u\[\e[m\]:\[\e[31m\]\W\[\e[m\]]]]\[\e[32m\] >>>\[\e[m\] "
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GPG_TTY=$(tty)
 
 # eval "$(plenv init -)"
 eval "$(pyenv init -)"
