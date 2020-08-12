@@ -1,0 +1,3 @@
+(in-package :lem-user)
+(setf (variable-value 'lem.line-numbers:line-numbers :global) t)
+(load-theme "emacs-dark")

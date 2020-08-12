@@ -1,0 +1,72 @@
+#!/bin/bash
+# aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias jtrans="2>/dev/null trans -b -j :ja"
+alias ssh-keygen="ssh-keygen -t rsa -b 4096"
+alias etrans="2>/dev/null trans -b -j :en"
+alias docui="sudo $GOPATH/bin/docui"
+alias hsi="ghci -XOverloadedStrings"
+alias tar-gz='tar -zxvf'
+alias mpdf="gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="
+alias repcl="lein repl"
+alias python=python3
+alias check='curl inet-ip.info'
+
+
+# alias cdc='cd /mnt/c/Users/hwata/Desktop'
+# alias wpwd='wslpath -w `pwd`'
+
+echo-sd "Aliases loaded."
+
+function gosh(){
+  rlwrap -c -q '"' -b "'"'(){}[].,#@;|`"' -m gosh
+}
+bindpdf() {
+  gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$*"
+}
+# check shell
+shchc() {
+  [ -z "$1" ] && return 1
+  shfmt -i 2 -ci -bn -s -kp -sr -w "$1"
+  bash -n "$1"
+  xsel -bi < "$1"
+  return 0
+}
+shellgei() {
+  sudo docker run \
+    -v $HOME/prog/:/prog/ \
+    -v $HOME/:/home_local/ \
+    -it theoldmoon0602/shellgeibot zsh
+}
+urlize(){
+  if [[ $# = 0 ]];then
+    echo "base64 -d <(sed -r 's/.{5}//'<<<'b.sh/`base64 < /dev/stdin`')|bash #shellgei"|tr -d \\n
+  else
+    echo "base64 -d <(sed -r 's/.{5}//'<<<'b.sh/`base64 <<<"$@"`')|bash #shellgei"|tr -d \\n
+  fi
+  echo
+}
+forkpull() {
+  giturl="$1"
+  echo -n "original git URL of own fork repo >>>"
+  [[ -z ${giturl}     ]] && read -r giturl
+  [[ -z ${giturl}     ]] || git remote add upstream "${giturl}"
+  git fetch upstream
+  git merge upstream/master
+}
+colorsl() {
+  while :;do
+    sl -"$(
+      shuf -en$[RANDOM%4+1] a l F e | tr -d ' '
+    )"|
+    lolcat -f
+  done
+ }
