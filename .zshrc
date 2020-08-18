@@ -6,6 +6,11 @@ case $- in
   *)     return ;;
 esac
 
+# case $TERM in
+#     linux) LANG=C ;;
+#     *)     LANG=ja_JP.UTF-8;;
+# esac
+
 #Alias定義ファイルのロード
 [ -f "$HOME/.zsh_aliases" ]&&source "$HOME/.zsh_aliases"
 
