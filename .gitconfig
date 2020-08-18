@@ -1,0 +1,14 @@
+[url "github:"]
+    InsteadOf = https://github.com/
+    InsteadOf = git@github.com:
+[user]
+    email = w10776e8w@yahoo.co.jp
+    name = eggplants
+#   signingkey = 1034A4F10A793032B135A573D46AD8A08C3D537D
+[core]
+# [gpg]
+#    program = /usr/bin/gpg
+# [commit]
+#    gpgsign = true
+[help]
+    autocorrect = 1

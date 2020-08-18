@@ -1,0 +1,10 @@
+Host example
+  HostName example.com
+  IdentityFile ~/.ssh/ex
+  User git
+
+Host *
+  # IdentitiesOnly yes
+  ServerAliveInterval 60
+  ServerAliveCountMax 50
+  TCPKeepAlive yes
