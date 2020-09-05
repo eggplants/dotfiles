@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# echo-sd
+which echo-sd ||{
+  wget -nv https://raw.githubusercontent.com/fumiyas/home-commands/master/echo-sd
+  sudo install -m 0755 echo-sd /usr/local/bin/echo-sd
+  rm echo-sd
+}
+
 # プロンプトでないなら終了！ｗ
 case $- in
   *i*)   ;;
