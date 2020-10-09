@@ -80,10 +80,17 @@ if [ -n "${force_color_prompt}" ]; then
   fi
 fi
 
+#引数をlsライクに着色
+zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
+echo-sd "zshrc_finished."
+
+# 天気表示
+. ~/.weatherCast.sh
+
 # git ブランチ名を色付きで表示させるメソッド
 rprompt-git-current-branch() {
   local branch_name st branch_status
-  if [ ! -e  ".git" ]; then
+  if [[ -z "$(git rev-parse --git-dir 2> /dev/null)" ]]; then
     return
   fi
   branch_name="$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
@@ -105,11 +112,3 @@ rprompt-git-current-branch() {
   echo "${branch_status}[$branch_name]%f"
 }
 RPROMPT='$(rprompt-git-current-branch)'
-
-
-#引数をlsライクに着色
-zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
-echo-sd "zshrc_finished."
-
-# 天気表示
-. ~/.weatherCast.sh

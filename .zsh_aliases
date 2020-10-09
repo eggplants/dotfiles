@@ -70,3 +70,7 @@ colorsl() {
     lolcat -f
   done
  }
+
+gclone(){
+  git clone "https://github.com${1}/${2}"
+}
