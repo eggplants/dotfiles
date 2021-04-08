@@ -1,25 +1,25 @@
 #!/bin/bash
 # aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias jtrans="2>/dev/null trans -b -j :ja"
-alias ssh-keygen="ssh-keygen -t rsa -b 4096"
-alias etrans="2>/dev/null trans -b -j :en"
-alias docui="sudo $GOPATH/bin/docui"
-alias hsi="ghci -XOverloadedStrings"
-alias tar-gz='tar -zxvf'
-alias mpdf="gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="
-alias repcl="lein repl"
-alias python=python3
 alias check='curl inet-ip.info'
-
+alias dir='dir --color=auto'
+alias docui="sudo $GOPATH/bin/docui"
+alias egrep='egrep --color=auto'
+alias elisp='emacs -Q --script'
+alias etrans="2>/dev/null trans -b -j :en"
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias hsi="ghci -XOverloadedStrings"
+alias jtrans="2>/dev/null trans -b -j :ja"
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+alias mpdf="gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="
+alias python=python3
+alias repcl="lein repl"
+alias ssh-keygen="ssh-keygen -t rsa -b 4096"
+alias tar-gz='tar -zxvf'
+alias vdir='vdir --color=auto'
 
 # alias cdc='cd /mnt/c/Users/hwata/Desktop'
 # alias wpwd='wslpath -w `pwd`'
