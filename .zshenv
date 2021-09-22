@@ -33,6 +33,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export GPG_TTY=$(tty)
 
 # eval "$(plenv init -)"
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(rbenv init -)"
 _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
