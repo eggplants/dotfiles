@@ -1,14 +1,20 @@
-[url "github:"]
-    InsteadOf = https://github.com/
-    InsteadOf = git@github.com:
-[user]
-    email = w10776e8w@yahoo.co.jp
-    name = eggplants
-#   signingkey = 1034A4F10A793032B135A573D46AD8A08C3D537D
 [core]
-# [gpg]
-#    program = /usr/bin/gpg
-# [commit]
-#    gpgsign = true
+    editor = nano
+[color]
+    ui = true
+[commit]
+    gpgsign = true
+[credential]
+    helper = /usr/share/doc/git/contrib/credential/netrc/git-credential-netrc.perl
+[user]
+    name = eggplants
+    email = w10776e8w@yahoo.co.jp
+    signingkey = 81171C840F81C8843F1FA171E84F494AD6539CE2
+[gpg]
+    program = /usr/bin/gpg
 [help]
     autocorrect = 1
+[init]
+    defaultBranch = master
+[pull]
+    rebase = false
