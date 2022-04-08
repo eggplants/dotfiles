@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 main(){
     local file h today
 
